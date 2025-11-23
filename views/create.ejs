@@ -1,0 +1,15 @@
+<%- include("partials/header") %>
+
+<h2>Add New Expense</h2>
+
+<form action="/expenses/create" method="POST">
+    <input class="form-control mb-3" name="title" placeholder="Title" required>
+    <input class="form-control mb-3" name="amount" type="number" placeholder="Amount" required>
+    <input class="form-control mb-3" name="category" placeholder="Category" required>
+    <input class="form-control mb-3" name="date" type="date" required>
+    <textarea class="form-control mb-3" name="notes" placeholder="Notes (optional)"></textarea>
+
+    <button class="btn btn-primary">Save Expense</button>
+</form>
+
+<%- include("partials/footer") %>

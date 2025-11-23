@@ -1,0 +1,31 @@
+<%- include("partials/header") %>
+
+<h2 class="mb-4">All Expenses</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% expenses.forEach(e => { %>
+        <tr>
+            <td><%= e.title %></td>
+            <td>$<%= e.amount %></td>
+            <td><%= e.category %></td>
+            <td><%= e.date.toISOString().split("T")[0] %></td>
+            <td>
+                <a href="/expenses/edit/<%= e._id %>" class="btn btn-warning btn-sm">Edit</a>
+                <a href="/expenses/delete/<%= e._id %>" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+<%- include("partials/footer") %>

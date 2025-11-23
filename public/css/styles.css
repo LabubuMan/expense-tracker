@@ -1,0 +1,7 @@
+body {
+    background: #f4f4f4;
+}
+
+table td, table th {
+    vertical-align: middle;
+}

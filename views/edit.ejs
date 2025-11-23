@@ -1,0 +1,15 @@
+<%- include("partials/header") %>
+
+<h2>Edit Expense</h2>
+
+<form action="/expenses/edit/<%= expense._id %>" method="POST">
+    <input class="form-control mb-3" name="title" value="<%= expense.title %>" required>
+    <input class="form-control mb-3" type="number" name="amount" value="<%= expense.amount %>" required>
+    <input class="form-control mb-3" name="category" value="<%= expense.category %>" required>
+    <input class="form-control mb-3" type="date" name="date" value="<%= expense.date.toISOString().split("T")[0] %>" required>
+    <textarea class="form-control mb-3" name="notes"><%= expense.notes %></textarea>
+
+    <button class="btn btn-primary">Update Expense</button>
+</form>
+
+<%- include("partials/footer") %>
