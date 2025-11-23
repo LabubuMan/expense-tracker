@@ -1,0 +1,80 @@
+PROJECT PLAN — EXPENSE TRACKER APPLICATION
+
+1. Project Title
+Expense Tracker Web Application
+
+2. Overview / Introduction
+The Expense Tracker is a web application designed to help users organize and monitor their personal spending. It allows users to record expenses, categorize them, update or delete entries, and view all expenses in one place. The goal of the app is to help individuals understand their spending habits and manage their budget more effectively.
+
+Technologies Used:
+- Node.js & ExpressJS
+- MongoDB & Mongoose
+- EJS templating
+- Bootstrap for UI styling
+
+3. Objectives
+Functional Objectives:
+- Create new expense entries
+- View list of all expenses
+- Update existing expenses
+- Delete expenses with confirmation
+- Store all data in MongoDB
+- Maintain a clean, Bootstrap-based UI
+
+Technical Objectives:
+- Use ExpressJS routing and controllers
+- Use Mongoose models
+- Use EJS templates
+- Use shared header/footer partials
+- Deploy on Render
+- Use dotenv + .gitignore for secure credentials
+
+4. Target Users
+The application is ideal for:
+- Students
+- Adults managing monthly budgets
+- Anyone wanting a simple way to track expenses
+
+5. Application Features
+Core Features:
+- Add new expenses with title, amount, category, date, and optional notes
+- View all expenses in a structured table
+- Edit any existing expense
+- Delete expenses with confirmation
+- Splash home page with navigation
+- Clean and responsive Bootstrap interface
+
+6. System Architecture
+Project Structure:
+
+expense-tracker/
+│   app.js
+│   .env
+│   package.json
+│
+├── config/
+│     db.js
+│
+├── controllers/
+│     expenseController.js
+│
+├── models/
+│     Expense.js
+│
+├── routes/
+│     expenseRoutes.js
+│
+├── public/
+│   └── css/
+│        styles.css
+│
+└── views/
+    │   home.ejs
+    │   expenses.ejs
+    │   create.ejs
+    │   edit.ejs
+    │   delete.ejs
+    │
+    └── partials/
+         header.ejs
+         footer.ejs
